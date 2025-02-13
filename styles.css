@@ -1,0 +1,187 @@
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #2c3e50;
+}
+
+header {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 56px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin: 0;
+  padding: 20px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  font-weight: 700;
+  animation: fadeIn 1s ease-in;
+}
+
+#game {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  min-width: 80%;
+  max-width: 800px;
+  margin-top: 60px;
+  transition: all 0.3s ease;
+}
+
+#word {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+#word span {
+  width: 45px;
+  height: 45px;
+  border-bottom: 4px solid #5b7bf7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+  color: #2c3e50;
+}
+
+#errors,
+#used_letters {
+  font-size: 20px;
+  margin: 15px 0;
+  text-align: center;
+  color: #2c3e50;
+  padding: 12px 20px;
+  background: rgba(91, 123, 247, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+#error-count {
+  color: #e74c3c;
+  font-weight: bold;
+  margin: 0 8px;
+  font-size: 24px;
+}
+
+#letters-list {
+  color: #27ae60;
+  font-weight: bold;
+  margin-left: 12px;
+  letter-spacing: 1px;
+}
+
+button {
+  padding: 15px 35px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, #5b7bf7, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(91, 123, 247, 0.3);
+  transition: all 0.3s ease;
+  margin: 12px;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(91, 123, 247, 0.4);
+  background: linear-gradient(45deg, #4a6ef5, #6a3f96);
+}
+
+button:active {
+  transform: translateY(-1px);
+}
+
+.hangman-art {
+  font-family: monospace;
+  white-space: pre;
+  margin: 20px 0;
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Styles pour SweetAlert2 */
+.swal-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.swal2-popup {
+    font-family: 'Poppins', sans-serif !important;
+    border-radius: 15px !important;
+}
+
+.swal2-title {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600 !important;
+}
+
+.swal2-input {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 1.1em !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  #game {
+    padding: 15px;
+    min-width: 90%;
+  }
+
+  #word span {
+    width: 35px;
+    height: 35px;
+    font-size: 24px;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+}
