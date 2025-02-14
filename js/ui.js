@@ -33,7 +33,7 @@ export function updateDisplay() {
         gameState.currentWord[i]
       )
         ? gameState.currentWord[i]
-        : "_";
+        : "*";
     }
   }
 }
